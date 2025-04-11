@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/csuchico-hackathon-spring25/static/css/main.13218dc7.css",
+    "main.js": "/csuchico-hackathon-spring25/static/js/main.ac50f3e1.js",
+    "static/js/453.e0fe82e1.chunk.js": "/csuchico-hackathon-spring25/static/js/453.e0fe82e1.chunk.js",
+    "static/media/acmlogo.png": "/csuchico-hackathon-spring25/static/media/acmlogo.5420e051f65c46262113.png",
+    "static/media/UPELogo.png": "/csuchico-hackathon-spring25/static/media/UPELogo.6630cf6523adab905ad3.png",
+    "static/media/chicostatecollegeofEECE.png": "/csuchico-hackathon-spring25/static/media/chicostatecollegeofEECE.6ebe42a88f6c0a2b608d.png",
+    "static/media/CFE_logo.png": "/csuchico-hackathon-spring25/static/media/CFE_logo.4e760636789036b9eb3c.png",
+    "static/media/TPClogo.png": "/csuchico-hackathon-spring25/static/media/TPClogo.609390255a9def6b59b4.png",
+    "static/media/chicoSTART_logo.png": "/csuchico-hackathon-spring25/static/media/chicoSTART_logo.b40428bb8b4a266fa000.png",
+    "index.html": "/csuchico-hackathon-spring25/index.html",
+    "main.13218dc7.css.map": "/csuchico-hackathon-spring25/static/css/main.13218dc7.css.map",
+    "main.ac50f3e1.js.map": "/csuchico-hackathon-spring25/static/js/main.ac50f3e1.js.map",
+    "453.e0fe82e1.chunk.js.map": "/csuchico-hackathon-spring25/static/js/453.e0fe82e1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.13218dc7.css",
+    "static/js/main.ac50f3e1.js"
+  ]
+}
