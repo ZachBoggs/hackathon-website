@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import acmwLogo from './images/clubs/acmw_logo.png'
 import acmLogo from './images/clubs/acmlogo.png';
 import upeLogo from './images/clubs/UPELogo.png';
 import tpcLogo from './images/clubs/TPClogo.png';
@@ -11,9 +12,9 @@ import './App.css';
 import { useEffect, useMemo } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
-  
+
 function App() {
-  
+
   const [init, setInit] = useState(false);
 
   // this should be run only once per application lifetime
@@ -46,7 +47,7 @@ function App() {
           value: "#1C1C1C",
         },
       },
-      
+
       fpsLimit: 60,
       interactivity: {
         events: {
@@ -111,71 +112,84 @@ function App() {
     [],
   );
 
-if (init) {
-  
-  return (
-    
-    <div className="App">
-      <title>CSU Chico Hackathon</title>
-      <Particles
-        id="tsparticles"
-        particlesLoaded={particlesLoaded}
-        options={options}
-      />
-      <div style={{ height: "20vh" }}></div> {/* Spacer */}
-      <div className="title-bar">
-        CSU Chico HACKATHON
-      </div>
-      <h1>Hosting Clubs:</h1>
-      <p>
-        <img src={upeLogo} alt='upe logo' className="club-logo"/>
-        <img src={acmLogo} alt='acm logo' className="club-logo"/>
-        <img src={tpcLogo} alt='tpc logo' className="club-logo"/>
-      </p>
+  if (init) {
 
-      <p>Thanks to our sponsors:</p>
-      <p>
-        <img src={cfeLogo} alt='cfe logo' className="club-logo"/>
-        <img src={chicoStartLogo} alt='chico start logo' className="club-logo"/>
-        <img src={chicoStateEECELogo} alt='EECE logo' className="club-logo"/>
-        <header>and Miles Benton</header>
-      </p>
+    return (
 
-      <header className="App-header">
-        <div style={{ width: "70%" }}>
-          <p>April 25-26, 2025, from 2:00 PM Friday to 2:30 PM Saturday </p>
+      <div className="App">
+        <title>CSU Chico Hackathon</title>
+        <Particles
+          id="tsparticles"
+          particlesLoaded={particlesLoaded}
+          options={options}
+        />
+        <div style={{ height: "20vh" }}></div> {/* Spacer */}
+        <div className="title-bar">
+          CSU Chico HACKATHON
         </div>
 
-        <div style={{ width: "70%" }}>
-          <p>
-            This event is open to all students, whether you’re a first-time participant or a seasoned hackathon veteran!
-          </p>
+
+
+        <div className='organization-holder'>
+          <h1>Hosting Clubs:</h1>
+          <img src={upeLogo} alt='upe logo' className="club-logo" />
+          <img src={acmLogo} alt='acm logo' className="club-logo" />
+          <img src={acmwLogo} alt='acmw logo' className="club-logo" />
+          <img src={tpcLogo} alt='tpc logo' className="club-logo" />
         </div>
-        <div style={{ width: "70%" }}>
+        <br />
+        <br />
+        <div className='organization-holder'>
+          <h1>Thanks to our sponsors:</h1>
           <p>
-            There will be TWO Divisions with the first place prizing being $375 for Division 1 and $200 for Division 2.
+            <img src={cfeLogo} alt='cfe logo' className="club-logo" />
+            <img src={chicoStartLogo} alt='chico start logo' className="club-logo" />
+            <img src={chicoStateEECELogo} alt='EECE logo' className="club-logo" />
+            <header>and Miles Benton</header>
           </p>
         </div>
 
-        <div style={{ width: "70%" }}>
-          <p>
-            To register or learn more please go to the CatsConnect page:
-          </p>
-        </div>
+        <br />
+        <br />
 
-        <a
-          className="App-link"
-          href="https://csuchico.campuslabs.com/engage/event/11056456"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          CatsConnect
-        </a>
+        <div className='organization-holder'>
+          <header className="App-header">
+            <div style={{ width: "70%" }}>
+              <p>April 25-26, 2025, from 2:00 PM Friday to 2:30 PM Saturday </p>
+            </div>
+
+            <div style={{ width: "70%" }}>
+              <p>
+                This event is open to all students, whether you’re a first-time participant or a seasoned hackathon veteran!
+              </p>
+            </div>
+            <div style={{ width: "70%" }}>
+              <p>
+                There will be TWO Divisions with the first place prizing being $375 for Division 1 and $200 for Division 2.
+              </p>
+            </div>
+
+            <div style={{ width: "70%" }}>
+              <p>
+                To register or learn more please go to the CatsConnect page:
+              </p>
+            </div>
+
+            <a
+              className="App-link"
+              href="https://csuchico.campuslabs.com/engage/event/11056456"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CatsConnect
+            </a>
+
+          </header>
+        </div>
         <div style={{ height: "30vh" }}></div>
-      </header>
-    </div>
-  );
-}
+      </div >
+    );
+  }
 }
 
 export default App;
