@@ -6,7 +6,7 @@
   z-index: 0;
 }
 
-.organization-holder {
+.item-holder {
   border: 10px solid rgba(0, 0, 0, 0.3);
   padding: 20px;
   display: inline-block;
@@ -14,6 +14,10 @@
   width: 70%;
   padding-left: 10%;
   padding-right: 10%;
+}
+
+.background-blur {
+  backdrop-filter: blur(4px);
 }
 
 .title-bar {
@@ -28,9 +32,7 @@
   align-items: center;
   justify-content: center;
   font-size: 3.2em;
-  /* ← Increase this value to make the text bigger */
   font-weight: bold;
-  /* ← This makes the text bold */
   z-index: 1;
   backdrop-filter: blur(4px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
