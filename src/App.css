@@ -27,7 +27,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.2em;
+  font-size: 3.2em;
   /* ← Increase this value to make the text bigger */
   font-weight: bold;
   /* ← This makes the text bold */
@@ -48,7 +48,8 @@ html,
 
 
 .club-logo {
-  height: 10vmin;
+  max-height: 15vmax;
+  height: 15vmin;
   pointer-events: none;
   padding: 1%;
 }

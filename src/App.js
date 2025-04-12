@@ -6,6 +6,7 @@ import tpcLogo from './images/clubs/TPClogo.png';
 import cfeLogo from './images/sponsors/CFE_logo.png';
 import chicoStartLogo from './images/sponsors/chicoSTART_logo.png';
 import chicoStateEECELogo from './images/sponsors/chicostatecollegeofEECE.png';
+import asFundingLogo from './images/sponsors/AS_Funding_Logo.png'
 
 import './App.css';
 
@@ -51,22 +52,16 @@ function App() {
       fpsLimit: 60,
       interactivity: {
         events: {
-          onClick: {
-            enable: true,
-            mode: "push",
-          },
           onHover: {
             enable: true,
             mode: "repulse",
           },
         },
         modes: {
-          push: {
-            quantity: 4,
-          },
+
           repulse: {
             distance: 200,
-            duration: 2,
+            duration: 10,
           },
         },
       },
@@ -79,7 +74,7 @@ function App() {
           distance: 150,
           enable: true,
           opacity: 0.3,
-          width: 1,
+          width: 1.5,
         },
         move: {
           direction: "none",
@@ -142,10 +137,12 @@ function App() {
         <div className='organization-holder'>
           <h1>Thanks to our sponsors:</h1>
           <p>
+            <header style={{ fontSize: '3em' }}>Miles Benton</header>
             <img src={cfeLogo} alt='cfe logo' className="club-logo" />
             <img src={chicoStartLogo} alt='chico start logo' className="club-logo" />
             <img src={chicoStateEECELogo} alt='EECE logo' className="club-logo" />
-            <header>and Miles Benton</header>
+            <img src={asFundingLogo} alt='as funding logo' className="club-logo" />
+
           </p>
         </div>
 
