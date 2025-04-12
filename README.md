@@ -10,7 +10,9 @@
 **Currently hosted at:**
 https://hackathon-website-spring25.vercel.app/home
 
-## 🔧 Tech Stack
+
+<h2 id="tech-stack">🔧 Tech Stack</h2>
+
 - React
 - React Router
 - Vercel
@@ -18,8 +20,7 @@ https://hackathon-website-spring25.vercel.app/home
 ![Vercel](https://img.shields.io/badge/deployed-Vercel-black?logo=vercel)
 ![React](https://img.shields.io/badge/Built%20With-React-blue?logo=react)
 
-## 🛠️ Installation
-
+<h2 id="installation">🛠️ Installation</h2>
 To get started, clone the repo and install the dependencies:
 
 ```bash
