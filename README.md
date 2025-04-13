@@ -18,10 +18,12 @@
 
 - React
 - React Router
+- Framer Motion
 - Vercel
 
 ![Vercel](https://img.shields.io/badge/deployed-Vercel-black?logo=vercel)
 ![React](https://img.shields.io/badge/Built%20With-React-blue?logo=react)
+![Framer Motion](https://img.shields.io/badge/animations-Framer%20Motion-ff4081?logo=framer)
 
 ---
 

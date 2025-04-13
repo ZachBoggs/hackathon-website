@@ -1,17 +1,17 @@
 import React from 'react';
-import { Sample } from './Sample'
+import { Current } from './Current'
 import { PageNotFound } from './PageNotFound'
+import { Testing } from './Testing';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-
 function App() {
-
 
   return (
 
     <BrowserRouter>
       <Routes>
-        <Route path='/home' element={<Sample />} />
+        <Route path='/home' element={<Current />} />
+        <Route path='/testing' element={<Testing />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
