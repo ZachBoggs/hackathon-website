@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import HomeButtonAnimated from "./HomeButtonAnimated";
 
 const AnimationSamples = () => {
   return (
@@ -7,16 +7,10 @@ const AnimationSamples = () => {
         Animation Samples!
       </header>
 
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: .9 }}
-        onClick={() => null}
-      >
-
-      </motion.button>
+      <HomeButtonAnimated />
 
       <footer>End of samples!</footer>
-    </div>
+    </div >
   )
 };
 

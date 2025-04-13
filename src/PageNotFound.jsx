@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import ParticleInteractive from './components/ParticleInteractive';
-
+import HomeButtonAnimated from './components/HomeButtonAnimated';
+import { useLocation } from 'react-router-dom';
 
 export function PageNotFound() {
+  const location = useLocation();
 
   return (
 
@@ -16,15 +17,14 @@ export function PageNotFound() {
     }}>
       <ParticleInteractive />
 
-      <h1 style={{ color: 'white' }}>
-        Page Not Found :(
-      </h1>
-
-      <Link to="/home" style={{ display: 'block', color: 'rgb(0,150,250,1)' }}>Go back to home?</Link>
+      <h1 style={{ color: 'white', fontWeight: 'bold' }}>Error 404</h1>
+      <h2 style={{ color: 'white', textAlign: 'center' }}>
+        '<code>{location.pathname}</code>' Not Found :(
+      </h2>
+      <HomeButtonAnimated />
 
     </div>
 
   );
 
 }
-
