@@ -1,12 +1,16 @@
 import React from 'react';
 import { AllImages } from './images'
+import { motion } from "framer-motion";
 import ParticleNonInteractive from './components/ParticleNonInteractive';
+import TooltipWrapper from './components/TooltipWrapper';
+import SpringyImage from './components/SpringyImage';
+
 
 import './Current.css';
+import Footer from './components/Footer';
 
 
 export function Current() {
-
   return (
 
     <div className="App">
@@ -19,23 +23,36 @@ export function Current() {
 
       <div className='item-holder background-blur'>
         <h1>Hosting Clubs:</h1>
-        <img src={AllImages.upe} alt='upe logo' className="club-logo" />
-        <img src={AllImages.acmw} alt='acmw logo' className="club-logo" />
-        <img src={AllImages.acm} alt='acm logo' className="club-logo" />
-        <img src={AllImages.tpc} alt='tpc logo' className="club-logo" />
+        <div>
+
+          <motion.div style={{ borderRadius: '2em', overflow: 'hidden' }}>
+          </motion.div>
+          <TooltipWrapper title="Upselon Pi Epsilon">
+            <SpringyImage src={AllImages.upe} alt="upe logo" link="." className='club-logo hover-pointing' />
+          </TooltipWrapper>
+          <TooltipWrapper title="The Association for Computer Machinery Committee for Women">
+            <SpringyImage src={AllImages.acmw} alt="acmw logo" link='.' className='club-logo hover-pointing' />
+          </TooltipWrapper>
+          <TooltipWrapper title="The Association Computer Machinery">
+            <SpringyImage src={AllImages.acm} alt="acm logo" link='.' className='club-logo hover-pointing' />
+          </TooltipWrapper>
+          <TooltipWrapper title="Technical Projects Club">
+            <SpringyImage src={AllImages.tpc} alt="tpc logo" link='.' className='club-logo hover-pointing' />
+          </TooltipWrapper>
+        </div>
       </div>
       <br />
       <br />
       <div className='item-holder background-blur'>
         <h1>Thanks to our sponsors:</h1>
-        <p>
-          <header style={{ fontSize: '3em' }}>Miles Benton</header>
+        <div>
+          <h1 style={{ fontSize: '3em' }}>Miles Benton</h1>
           <img src={AllImages.cfe} alt='cfe logo' className="club-logo" />
           <img src={AllImages.chicoStart} alt='chico start logo' className="club-logo" />
           <img src={AllImages.EECE} alt='EECE logo' className="club-logo" />
           <img src={AllImages.asFunding} alt='as funding logo' className="club-logo" />
 
-        </p>
+        </div>
       </div>
 
       <br />
@@ -76,6 +93,7 @@ export function Current() {
         </header>
       </div>
       <div style={{ height: "10vh" }}></div>
+      <Footer />
     </div >
   );
 

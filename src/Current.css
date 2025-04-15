@@ -6,6 +6,12 @@
   z-index: 0;
 }
 
+.hover-pointing {
+  pointer-events: auto;
+  cursor: pointer
+}
+
+
 .item-holder {
   border: 10px solid rgba(0, 0, 0, 0.3);
   padding: 20px;
@@ -50,9 +56,8 @@ html,
 
 
 .club-logo {
-  max-height: 15vmax;
-  height: 15vmin;
-  pointer-events: none;
+  max-height: 20vmax;
+  height: 20vmin;
   padding: 1%;
 }
 

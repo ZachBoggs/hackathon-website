@@ -13,7 +13,8 @@ export function PageNotFound() {
       justifyContent: 'center',
       flexDirection: 'column',
       alignItems: 'center',
-      height: '100vh'
+      height: '100vh',
+      overflow: 'hidden'
     }}>
       <ParticleInteractive />
 
