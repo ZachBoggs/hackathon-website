@@ -19,13 +19,14 @@ const Footer = () => {
 
     try {
       // for local testing
-      //const res = await fetch("http://localhost:3000/add-feedback", {
-      //const res = await fetch("https://csu-chico-hackathons-backend-ettb77tn6-zachboggs-projects.vercel.app/add-feedback", {
-      const res = await fetch("https://csu-chico-hackathons-backend.vercel.app/add-feedback", {
+      const res = await fetch("http://localhost:3000/add-feedback", {
+        mode: 'no-cors',
+        //const res = await fetch("https://csu-chico-hackathons-backend.vercel.app/add-feedback", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
       });
+
 
       if (!res.ok) throw new Error("Failed to submit");
 

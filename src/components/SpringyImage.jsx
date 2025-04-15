@@ -15,11 +15,11 @@ const SpringyImage = ({
     scale: 0.95
   },
   whileHover = {
-    filter: 'brightness(1.3) drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.8)) drop-shadow(0px -5px 0px rgba(255, 255, 255, 0.8)) drop-shadow(0px 5px 0px rgba(69, 69, 69, 0.7))',
+    filter: 'brightness(1.3) drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.8)) drop-shadow(0px -5px 0px rgba(255, 255, 255, 0.8)) drop-shadow(0px 5px 0px rgba(45, 45, 45, 0.99))',
     scale: 1.05
   },
   initial = {
-    filter: 'brightness(1.0) drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.4)) drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.4)) drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.4))',
+    filter: 'brightness(1.0) drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.8)) drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.4)) drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.4))',
   },
   transition = { type: 'tween', ease: 'easeInOut', duration: 0.3 }
 
