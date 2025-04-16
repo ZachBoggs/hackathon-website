@@ -52,8 +52,8 @@ const Footer = () => {
         <p>( currently doesn't send data - had issues with express js )</p>
         {submitted ? <div className="text-center text-green-600 font-medium p-4 border rounded shadow">
           Thank you for your feedback!
-
         </div> : <br />}
+
         <motion.div
           initial={{ opacity: 1 }}
           animate={{ opacity: submitted ? 0 : 1, y: submitted ? 100 : 0 }}
