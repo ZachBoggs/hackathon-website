@@ -61,10 +61,12 @@ const Footer = () => {
         >
           <Stack
             direction={'row'}
-            spacing={2}
-            padding={2}
-            width={'100%'}
+            padding={.5}
+            spacing={1}
             justifyContent={'center'}
+            sx={{
+              width: '100%',
+            }}
           >
             <TextField
               id="outlined-textarea"
@@ -74,6 +76,7 @@ const Footer = () => {
               value={formData.firstname}
               onChange={handleChange}
               sx={{
+                width: '50%',
                 backgroundColor: '#f0f0f0',
                 borderRadius: 6,
                 input: { color: '#0' },
@@ -94,6 +97,7 @@ const Footer = () => {
               value={formData.lastname}
               onChange={handleChange}
               sx={{
+                width: '50%',
                 backgroundColor: '#f0f0f0',
                 borderRadius: 6,
                 input: { color: '#0' },
@@ -107,7 +111,7 @@ const Footer = () => {
             />
           </Stack>
 
-          <div>
+          <div style={{ padding: '.5em' }}>
             <TextField
               id="outlined-textarea"
               label="email - optional"
@@ -116,6 +120,7 @@ const Footer = () => {
               value={formData.email}
               onChange={handleChange}
               sx={{
+                width: '100%',
                 backgroundColor: '#f0f0f0',
                 borderRadius: 6,
                 input: { color: '#0' },
@@ -128,8 +133,9 @@ const Footer = () => {
               }}
             />
           </div>
-          <div style={{ padding: '1em' }}>
+          <div style={{ padding: '.5em' }}>
             <TextField
+
               id="outlined-textarea"
               label="feedback"
               name="feedback"
@@ -138,6 +144,7 @@ const Footer = () => {
               value={formData.feedback}
               onChange={handleChange}
               sx={{
+                width: '100%',
                 backgroundColor: '#f0f0f0',
                 borderRadius: 6,
                 textarea: { color: '#0' },
