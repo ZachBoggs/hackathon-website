@@ -1,7 +1,8 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { animate, motion } from 'framer-motion';
 import { filter } from 'framer-motion/client';
 import { useNavigate } from 'react-router-dom';
+import { duration } from '@mui/material';
 
 
 const SpringyImage = ({
@@ -9,24 +10,36 @@ const SpringyImage = ({
   alt,
   link = '.',
   className = '',
-  style = {},
-
   whileTap = {
-    scale: 0.95
+    scale: 0.95,
+
   },
   whileHover = {
-    filter: 'brightness(1.3) drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.8)) drop-shadow(0px -5px 0px rgba(255, 255, 255, 0.8)) drop-shadow(0px 5px 0px rgba(45, 45, 45, 0.99))',
-    scale: 1.05
+    scale: [1, 1.2],
+    y: [0, 10],
+    transition: {
+      duration: .4,
+    },
+    filter: 'brightness(1.3) drop-shadow(0px -2px 1px rgba(255, 255, 255, 1)) drop-shadow(0px -4px 2px rgba(255, 255, 255, 0.4)) drop-shadow(0px -10px 10px rgba(0, 0, 0, .2))',
+
   },
   initial = {
-    filter: 'brightness(1.0) drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.8)) drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.4)) drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.4))',
+    y: 0,
+    scale: [1.2, 1],
+    transition: {
+      duration: .5,
+      ease: 'easeInOut'
+    },
+
+    filter: 'brightness(1.0) drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.4)) drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.4)) drop-shadow(0px 1px 3px rgba(0, 0, 0, 1))',
+
   },
-  transition = { type: 'tween', ease: 'easeInOut', duration: 0.3 }
 
 }) => {
   const navigate = useNavigate();
 
   const goToRoute = (path) => {
+
     if (path == '.') {
       return;
     }
@@ -49,8 +62,9 @@ const SpringyImage = ({
       whileHover={whileHover}
       whileTap={whileTap}
       initial={initial}
-      animate={initial}
-      transition={transition}
+
+      whileInView={initial}
+
     />
   );
 };

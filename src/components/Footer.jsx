@@ -44,7 +44,7 @@ const Footer = () => {
       alert("There was an error submitting the form.");
     }
   };
-
+  return;
   return (
     <div>
       <div className="transition-all duration-500 mx-auto item-holder background-blur">
