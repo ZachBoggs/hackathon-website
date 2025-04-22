@@ -1,18 +1,18 @@
 import React from 'react';
 import { animate, motion } from 'framer-motion';
 import { filter } from 'framer-motion/client';
-import { useNavigate } from 'react-router-dom';
 import { duration } from '@mui/material';
 
 
 const SpringyImage = ({
+  displayClubHook,
+  clubName,
   src,
   alt,
   link = '.',
   className = '',
   whileTap = {
     scale: 0.95,
-
   },
   whileHover = {
     scale: [1, 1.2],
@@ -36,18 +36,6 @@ const SpringyImage = ({
   },
 
 }) => {
-  const navigate = useNavigate();
-
-  const goToRoute = (path) => {
-
-    if (path == '.') {
-      return;
-    }
-
-    setTimeout(() => {
-      navigate(path);
-    }, 200);
-  };
 
   return (
     <motion.img
@@ -58,7 +46,9 @@ const SpringyImage = ({
         borderRadius: '16px',
         padding: '.5em',
       }}
-      onTap={() => goToRoute(link)}
+      onTap={() => {
+        displayClubHook(clubName);
+      }}
       whileHover={whileHover}
       whileTap={whileTap}
       initial={initial}

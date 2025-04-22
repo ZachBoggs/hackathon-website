@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AllImages } from './images'
 import { easeIn, motion } from "framer-motion";
 import ParticleNonInteractive from './components/ParticleNonInteractive';
 import TooltipWrapper from './components/TooltipWrapper';
 import SpringyImage from './components/SpringyImage';
+import clubData from './clubs.json';
+import QRCode from 'react-qr-code';
+import clubLinks from './clublinks.json'
 
 
 import './Current.css';
@@ -21,14 +24,15 @@ function slideDirection(xDistance, yDistance, time) {
   };
 }
 
-export function Current() {
 
+export function Current() {
+  const [currentClubName, updateName] = useState("upe");
   return (
 
     <div className="App">
       <title>CSU Chico Hackathon</title>
       <ParticleNonInteractive />
-      <div style={{ height: "20vh" }}></div> {/* Spacer */}
+      <div style={{ height: "20vh" }}></div> { }
       <div className="title-bar">
         CSU Chico HACKATHON
       </div>
@@ -38,21 +42,39 @@ export function Current() {
         <div>
 
           <TooltipWrapper title="Upsilon Pi Epsilon">
-            <SpringyImage src={AllImages.upe} alt="upe logo" link="." className='club-logo hover-pointing' />
+            <SpringyImage src={AllImages.upe} alt="upe logo" link="." className='club-logo hover-pointing' displayClubHook={updateName} clubName={"UPE"} />
           </TooltipWrapper>
           <TooltipWrapper title="The Association for Computer Machinery for Women">
-            <SpringyImage src={AllImages.acmw} alt="acmw logo" link='.' className='club-logo hover-pointing' />
+            <SpringyImage src={AllImages.acmw} alt="acmw logo" link='.' className='club-logo hover-pointing' displayClubHook={updateName} clubName={"ACMW"} />
           </TooltipWrapper>
           <TooltipWrapper title="The Association for Computer Machinery">
-            <SpringyImage src={AllImages.acm} alt="acm logo" link='.' className='club-logo hover-pointing' />
+            <SpringyImage src={AllImages.acm} alt="acm logo" link='.' className='club-logo hover-pointing' displayClubHook={updateName} clubName={"ACM"} />
           </TooltipWrapper>
           <TooltipWrapper title="Technical Projects Club">
-            <SpringyImage src={AllImages.tpc} alt="tpc logo" link='.' className='club-logo hover-pointing' />
+            <SpringyImage src={AllImages.tpc} alt="tpc logo" link='.' className='club-logo hover-pointing' displayClubHook={updateName} clubName={"TPC"} />
           </TooltipWrapper>
         </div>
       </div>
+
       <br />
       <br />
+      <br />
+
+      <div className='item-holder background-blur'>
+        <h1>{currentClubName.toUpperCase()}</h1>
+        <p>{clubData[currentClubName.toLowerCase()] ?? "No club data found"}</p>
+        <p>{clubLinks[currentClubName.toLowerCase()] != null ? <div><p>{clubLinks[currentClubName.toLowerCase()]}</p><br />< QRCode value={clubLinks[currentClubName.toLowerCase()]} style={{
+          border: '10px solid rgba(255, 255, 255, 1)',
+          borderRadius: '20px',
+          filter: 'drop-shadow(0px -2px 1px rgba(255, 255, 255, 1)) drop-shadow(0px 2px 1px rgba(255, 255, 255, 1)) drop-shadow(2px 0px 1px rgba(255, 255, 255, 1)) drop-shadow(-2px 0px 1px rgba(255, 255, 255, 1))'
+        }} /></div> : ""}</p>
+      </div>
+
+
+      <br />
+      <br />
+      <br />
+
       <div className='item-holder background-blur'>
         <h1>Thanks to our sponsors:</h1>
         <div>
